@@ -39,23 +39,34 @@ h1,h2,h3,h4,p{margin:0}
 .faq p{padding:0 0 22px 52px;color:#272F59;line-height:1.75;font-size:16px}
 .note{font-size:13px;line-height:1.7;color:#594A3E}
 .hand{font-family:'Nanum Pen Script',cursive;color:#C23E1F;line-height:1.3}
+.site-head{display:flex;align-items:center;gap:8px 32px;padding-top:14px;padding-bottom:14px}
+.site-head>a:first-child{margin-right:auto}
+.site-nav{display:flex;align-items:center;gap:4px 6px}
+.head-buy{min-height:44px;padding:0 20px;font-size:17px}
+@media (max-width:720px){
+.site-head{flex-wrap:wrap;gap:6px 12px;padding-top:10px;padding-bottom:0}
+.site-head>a:first-child span:first-child{font-size:28px!important}
+.head-buy{order:2;min-height:44px;padding:0 16px;font-size:16px}
+.site-nav{order:3;flex:1 0 100%;justify-content:space-between;gap:0;margin:0 -8px}
+.site-nav .nav-link{flex:1 1 auto;justify-content:center;padding:0 6px;font-size:15px}
+}
 </style>
 </head>
 <body>
 <div style="min-height:100vh;display:flex;flex-direction:column;background:#F2EDE4">
 <header style="background:#F2EDE4;border-bottom:1px solid rgba(22,32,89,.14)">
-<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 32px;padding-top:14px;padding-bottom:14px">
+<div class="wrap site-head">
 <a href="index.html" aria-label="노벤디아 홈으로" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;min-height:44px">
 <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:32px;letter-spacing:.1em;color:#162059;line-height:44px">NOVENDIA</span>
 <span style="font-size:13px;font-weight:500;color:#594A3E">노벤디아</span>
 </a>
-<nav aria-label="주 메뉴" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px">
+<nav class="site-nav" aria-label="주 메뉴">
 <a class="nav-link" href="index.html">홈</a>
 <a class="nav-link" href="brand.html">브랜드</a>
 <a class="nav-link" href="product.html">제품</a>
 <a class="nav-link" href="support.html" aria-current="page">고객센터</a>
-<a class="btn" href="product.html#buy" style="min-height:44px;padding:0 20px;margin-left:8px">구매하기</a>
 </nav>
+<a class="btn head-buy" href="product.html#buy">구매하기</a>
 </div>
 </header>
 <main>
