@@ -190,6 +190,11 @@ main img:not([src*="logo"]){filter:saturate(.72) brightness(.96)}
 @media (prefers-reduced-motion:reduce){.fh-hero-media video{display:none}.fh-hero-media{background:url(images/hero_poster.jpg) center/cover}}
 
 @media (max-width:720px){footer nav a{min-height:44px!important}.fh-lk{display:inline-flex;align-items:center;min-height:44px;padding-bottom:0}.ig-handle{display:inline-flex;align-items:center;min-height:44px}.fh-ad{font-size:12px}}
+
+/* product_sky: show whole product, tone into navy */
+.ps-frame{position:relative;overflow:hidden;border-radius:10px;background:#0E1222}
+.ps-frame img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.78) brightness(.88) contrast(1.05)!important}
+.ps-frame::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 70px 24px rgba(14,18,34,.6)}
 </style>
 </head>
 <body>
@@ -229,7 +234,7 @@ main img:not([src*="logo"]){filter:saturate(.72) brightness(.96)}
 </div></div>
 
 <section class="fh-sec" aria-labelledby="prod-title"><div class="wrap fh-two">
-<div class="fh-img"><img loading="lazy" src="images/product_sky.jpg" alt="바위 위에 놓인 노벤디아 폴리글라이드 스틱과 뚜껑"></div>
+<div class="fh-img ps-frame"><img loading="lazy" src="images/product_sky.jpg" alt="바위 위에 놓인 노벤디아 폴리글라이드 스틱과 뚜껑" width="859" height="745" style="aspect-ratio:859/745"></div>
 <div>
 <span class="eyebrow">The Product</span>
 <h2 id="prod-title">노벤디아<br>폴리글라이드 스틱 <span class="fh-g">40g</span></h2>

@@ -132,6 +132,11 @@ main img:not([src*="logo"]){filter:saturate(.72) brightness(.96)}
 .buy-tile{flex:0 0 auto;width:200px;aspect-ratio:200/260;background:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .buy-tile img{height:88%;width:auto;filter:none!important}
 @media (max-width:720px){.buy-tile{width:100%;aspect-ratio:auto;height:260px}}
+
+/* product_sky: show whole product, tone into navy */
+.ps-frame{position:relative;overflow:hidden;border-radius:10px;background:#0E1222}
+.ps-frame img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.78) brightness(.88) contrast(1.05)!important}
+.ps-frame::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 70px 24px rgba(14,18,34,.6)}
 </style>
 </head>
 <body>
@@ -166,8 +171,8 @@ main img:not([src*="logo"]){filter:saturate(.72) brightness(.96)}
 <a href="#start" style="display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border-radius:6px;border:1.5px solid rgba(242,237,228,.6);color:#EEE9DF;font-weight:600;font-size:17px;text-decoration:none">코스 따라 읽기</a>
 </div>
 </div>
-<div style="flex:1 1 420px;min-height:540px;position:relative">
-<img loading="lazy" src="images/product_sky.jpg" alt="하늘을 배경으로 바위 위에 놓인 노벤디아 폴리글라이드 스틱" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div class="ps-frame" style="flex:1 1 420px;aspect-ratio:859/745;align-self:center">
+<img loading="lazy" src="images/product_sky.jpg" alt="하늘을 배경으로 바위 위에 놓인 노벤디아 폴리글라이드 스틱" width="859" height="745">
 </div>
 </div>
 </section>
